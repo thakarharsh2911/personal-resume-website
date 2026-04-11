@@ -1,23 +1,135 @@
-[ Navbar ]
-Home | Menu | About | Contact
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falguni Tiffin Services</title>
 
-[ Hero Section ]
-"Fresh Homemade Tiffin at Your Doorstep"
-Button: Order Now
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+}
 
-[ About Section ]
-Brief about business
+header {
+    background: #ff7043;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
 
-[ Menu Section ]
-Lunch Details
-Dinner Details
-Price
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
 
-[ Service Area ]
-15 km from Naranpura
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
 
-[ Contact Section ]
-Form (Name, Email, Message)
-Phone + Email
+section {
+    padding: 20px;
+}
 
-[ Footer ]
+.hero {
+    background: #ffe0b2;
+    text-align: center;
+    padding: 50px;
+}
+
+.btn {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.menu {
+    background: #f9f9f9;
+}
+
+.contact {
+    background: #e8f5e9;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Falguni Tiffin Services</h1>
+<p>Homemade Gujarati Food at Your Doorstep</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>Fresh & Healthy Tiffin Delivered Daily</h2>
+<p>Serving within 15 km of Naranpura, Ahmedabad</p>
+<a class="btn" href="#contact">Order Now</a>
+</section>
+
+<section>
+<h2>About Us</h2>
+<p>We provide fresh, hygienic and home-style Gujarati meals for students, families, and professionals. Our meals are prepared daily with quality ingredients.</p>
+</section>
+
+<section class="menu" id="menu">
+<h2>Our Menu</h2>
+
+<h3>Lunch - ₹150</h3>
+<p>1 Green Vegetable Sabji, 1 Kathol, Dal-Rice, 5 Rotis, Papad, Buttermilk</p>
+
+<h3>Dinner - ₹150</h3>
+<p>Khichdi, Kadhi, 1 Sabji, 3 Bhakhari, Buttermilk</p>
+</section>
+
+<section>
+<h2>Service Area</h2>
+<p>We deliver within 15 km of Naranpura, Ahmedabad.</p>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+
+<p>Phone: +91-9824397311</p>
+<p>Email: falgunitiffin@gmail.com</p>
+
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Your Name" required><br><br>
+<input type="email" placeholder="Your Email" required><br><br>
+<textarea placeholder="Your Message" required></textarea><br><br>
+<button type="submit">Send Inquiry</button>
+</form>
+
+<p id="msg"></p>
+
+</section>
+
+<footer>
+<p>© 2026 Falguni Tiffin Services</p>
+</footer>
+
+<script>
+function submitForm(e) {
+    e.preventDefault();
+    document.getElementById("msg").innerText = "Thank you! We will contact you soon.";
+}
+</script>
+
+</body>
+</html>
